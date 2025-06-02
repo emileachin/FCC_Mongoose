@@ -50,8 +50,8 @@ const findOneByFood = (food, done) => {
       favoriteFoods: food,
     },
     (err, data) => {
-      if (err) console.log(err);
-      else done(null, data);
+      if (err) throw err;
+      done(null, data);
     }
   );
 };
@@ -61,7 +61,6 @@ const findPersonById = (personId, done) => {
     if (err) throw err
     done(null, data)
   })
-  done(null /*, data*/);
 };
 
 const findEditThenSave = (personId, done) => {

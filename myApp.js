@@ -82,7 +82,6 @@ const findAndUpdate = (personName, done) => {
     done(null, person)
   })
 
-  done(null /*, data*/);
 };
 
 const removeById = (personId, done) => {
